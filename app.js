@@ -4,7 +4,7 @@ let auteur = document.querySelector(".auteur");
 let tweet = document.querySelector(".tweet");
 const favorite = document.querySelector(".favorit");
 
-
+//THE ARAY OF Quotes
 const quotes = [
   {
     quote: `i want to win ,i do not desire to be their equal , in my heart i want to best them`,
@@ -42,12 +42,13 @@ const quotes = [
   },
 ];
 
+
 btn.addEventListener("click", () => {
   let random = Math.floor(Math.random() * quotes.length);
   quote.innerText = quotes[random].quote;
   auteur.innerText = quotes[random].auteur;
 });
-
+// the tweet button
 tweet.addEventListener("click", () => {
   let quoteText = quote.innerText;
   let author = auteur.innerText;
@@ -57,7 +58,7 @@ tweet.addEventListener("click", () => {
 });
 
 favorite.addEventListener("click", addToFavorites);
-
+// add to favorite function
 function addToFavorites() {
   const quoteText = quote.innerText;
   const author = auteur.innerText;
